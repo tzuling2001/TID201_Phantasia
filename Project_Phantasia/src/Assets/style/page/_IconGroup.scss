@@ -1,0 +1,48 @@
+.content {
+  border: $baseBlue solid;
+}
+.testSidebarHeader {
+  width: 100%;
+  height: 15vh;
+  border-bottom: $baseBlue solid;
+  background-color: $subWhite;
+}
+
+.i {
+  $size: 20px;
+  .dark-save {
+    @include save("dark", $size);
+  }
+  .dark-arrow {
+    @include arrow("dark", $size);
+  }
+  .dark-check {
+    @include check("dark", $size);
+  }
+  .dark-edit {
+    @include edit("dark", $size);
+  }
+  .dark-upload {
+    @include upload("dark", $size);
+  }
+  .dark-view {
+    @include view("dark", $size);
+  }
+  .dark-pen {
+    @include pen("dark", $size);
+  }
+  .dark-plus {
+    @include plus("dark", $size);
+  }
+  .dark-setting {
+    @include setting("dark", $size);
+  }
+
+  .light-cross {
+    @include cross(
+      25px,
+      $baseOrange,
+      2px
+    ); // @ include cross( 大小, 顏色:baseColor、subColor , 線框度)
+  }
+}

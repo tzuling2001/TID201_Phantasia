@@ -1,0 +1,120 @@
+/* ----- Key Btn ---- */
+.btnKey-L {
+  $size: 24px;
+  &.dark {
+    @include keybtn($baseBlue, false, ture);
+    color: $subWhite;
+    transition: all 0.3s ease;
+    font-size: $size;
+    &:hover {
+      background-color: $subBlue;
+      @include cols-transition();
+    }
+    // border
+    &-border {
+      @include keybtn($baseBlue, ture, false);
+      color: $baseBlue;
+      transition: all 0.3s ease;
+      font-size: $size;
+      &:hover {
+        box-shadow: 0px 0px 20px 0px rgba($baseBlue, 0.6);
+        @include cols-transition();
+      }
+    }
+  }
+
+  &.light {
+    @include keybtn($baseOrange, false, ture);
+    color: $subWhite;
+    transition: all 0.3s ease;
+    font-size: $size;
+    &:hover {
+      background-color: $subOrange;
+      @include cols-transition();
+    }
+    // border
+    &-border {
+      @include keybtn($baseOrange, ture, false);
+      color: $baseOrange;
+      transition: all 0.3s ease;
+      font-size: $size;
+      &:hover {
+        box-shadow: 0px 0px 20px 0px rgba($baseOrange, 0.6);
+        @include cols-transition();
+      }
+    }
+  }
+
+  &.none {
+    @include keybtn($subDark-gray, false);
+    color: $subGray;
+    font-size: $size;
+  }
+}
+
+.btnKey-M {
+  $size: 20px;
+  &.dark {
+    @include keybtn($baseBlue, false, ture);
+    color: $subWhite;
+    transition: all 0.3s ease;
+    font-size: $size;
+    &:hover {
+      background-color: $subBlue;
+      @include cols-transition();
+    }
+    // border
+    &-border {
+      @include keybtn($baseBlue, ture, false);
+      color: $baseBlue;
+      transition: all 0.3s ease;
+      font-size: $size;
+      &:hover {
+        box-shadow: 0px 0px 20px 0px rgba($baseBlue, 0.6);
+        @include cols-transition();
+      }
+    }
+  }
+
+  &.light {
+    @include keybtn($baseOrange, false, ture);
+    color: $subWhite;
+    transition: all 0.3s ease;
+    font-size: $size;
+    &:hover {
+      background-color: $subOrange;
+      @include cols-transition();
+    }
+    // border
+    &-border {
+      @include keybtn($baseOrange, ture, false);
+      color: $baseOrange;
+      transition: all 0.3s ease;
+      font-size: $size;
+      &:hover {
+        box-shadow: 0px 0px 20px 0px rgba($baseOrange, 0.6);
+        @include cols-transition();
+      }
+    }
+  }
+
+  &.none {
+    @include keybtn($subDark-gray, false);
+    color: $subGray;
+    font-size: $size;
+  }
+}
+
+/* ----- Link Btn ---- */
+.btnLink {
+  font-size: 20px default;
+  &.dark {
+    @include normalBtn($baseBlue);
+  }
+  &.light {
+    @include normalBtn($baseOrange);
+  }
+  &.white {
+    @include normalBtn($subWhite);
+  }
+}

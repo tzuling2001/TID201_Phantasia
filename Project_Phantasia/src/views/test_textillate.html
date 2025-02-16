@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- 引入 jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- 引入 Lettering.js -->
+    <script src="https://cdn.jsdelivr.net/npm/lettering.js@0.7.0/jquery.lettering.min.js"></script>
+
+    <!-- 引入 animate.css -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <!-- 引入 textillate.js -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery.textillate@0.4.0/jquery.textillate.min.js"></script>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h3 class="tlt">
+      In today’s fast-paced digital era, we are committed to creating a safe and
+      nurturing online space for parents and children. Our platform focuses on
+      the creation and sharing of interactive picture books, blending stories,
+      special effects, and engaging interactions to transform reading into a new
+      way for children to explore the world.
+    </h3>
+  </body>
+
+  <script>
+    $(document).ready(function () {
+      $(".your-element").textillate({
+        in: {
+          effect: "fadeInUp", // 這裡可以替換為任何 animate.css 支援的效果
+          delay: 50,
+        },
+      });
+    });
+  </script>
+</html>

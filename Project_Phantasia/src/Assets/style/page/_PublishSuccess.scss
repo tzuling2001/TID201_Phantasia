@@ -1,0 +1,55 @@
+.PublishSuccess{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .titleGroup{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        p{
+            display: flex;
+            align-items: center;
+            .large{
+                font-size: 10vw;
+            }
+            .middle{
+                font-size: 8vw;
+            }
+            .little{
+                font-size: 6vw;
+            }
+
+        }
+        // 排版
+        .top{
+            transform: translateY(4vh);
+        }
+        .mid{
+            .line{
+                margin: 5px;
+                width: 10vw;
+                height: 0.5vh;
+                background-color: $baseBlue;
+            } 
+        }
+        .btm{
+            transform: translateY(-4vh);
+        }
+    }
+    .btnGroup{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        justify-content: center;
+        align-items: center;
+
+        .btnKey-L{
+            width: 360px;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+}

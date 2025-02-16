@@ -1,0 +1,83 @@
+.content {
+  border: $baseBlue solid;
+  padding: 10px;
+}
+// icon
+.icon {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 10px;
+}
+.icon-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.i {
+  $size: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .dark-save {
+    @include save("dark", $size);
+  }
+  .dark-arrow {
+    @include arrow("dark", $size);
+  }
+  .dark-check {
+    @include check("dark", $size);
+  }
+  .dark-edit {
+    @include edit("dark", $size);
+  }
+  .dark-upload {
+    @include upload("dark", $size);
+  }
+  .dark-view {
+    @include view("dark", $size);
+  }
+  .dark-pen {
+    @include pen("dark", $size);
+  }
+  .dark-plus {
+    @include plus("dark", $size);
+  }
+  .dark-setting {
+    @include setting("dark", $size);
+  }
+  .dark-cross {
+    @include cross(
+      $size,
+      $baseBlue,
+      2px
+    ); // @ include cross( 大小, 顏色:baseColor、subColor , 線框度)
+  }
+}
+// button
+.button {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+.howToUse {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.btnLink {
+  font-size: 24px;
+}
+.iconBag {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.btn-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}

@@ -1,0 +1,130 @@
+// 變數
+$border: $baseBlue solid;
+
+//--------------------------------
+// mixin Tab-btn 
+//--------------------------------
+@mixin btnTab($basecolor, $subcolor, $fontsize) {
+  display: flex;
+  width: 100%;
+  border-bottom: $basecolor solid;
+  .text {
+    padding: 5px 10px;
+    color: $basecolor;
+    width: 100%;
+    font-size: $fontsize;
+  }
+  .tab-cross {
+    position: relative;
+    width: 40px;
+    border-left: $basecolor solid;
+    .cols {
+      @include cols(2px, $basecolor);
+    }
+    .rows {
+      @include rows(2px, $basecolor);
+    }
+  }
+  /* hover */
+  &:hover {
+    .tab-cross {
+      position: relative;
+      height: auto;
+      width: 40px;
+      background-color: $basecolor;
+      .cols {
+        @include cols(2px, $subcolor);
+        transform: translateX(calc(4%));
+        span:nth-child(2) {
+          display: none;
+        }
+      }
+      .rows {
+        @include rows(2px, $subcolor);
+      }
+    }
+  }
+}
+
+.ProjectMenu{
+  width: 100%;
+  display: flex;
+  gap: 10px;
+
+// -----------------------
+// sidebar架構
+// -----------------------
+  .sidebar {
+    // 位置
+    position: sticky;
+    left: 1vw;
+    top: 0;
+    // 外觀
+    max-width: 250px;
+    width: 100%;
+    height: 50vh;
+    // 內容排版
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    border-left: $border;
+    border-right: $border;
+    border-bottom: $border;
+    background-color: $subWhite;
+    padding-bottom: 50px;
+  }
+  // user 物件
+    .user {
+      width: 100%;
+      height: 100% ;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .useImg {
+        width: 180px;
+        height: 180px;
+        border-radius: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: $baseBlue solid;
+        .avatar {
+          width: 85%;
+          height: 85%;
+          border-radius: 80%;
+          background-color: $subGray;
+        }
+      }
+    }
+
+  // Tab 內容
+    .tab-group {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      border-top: $baseBlue solid;
+      .btnTab {
+        @include btnTab($baseBlue, $subWhite, 20px);
+        &.active{
+          @include btnTab($baseBlue, $subWhite, 18px);
+          .text {
+            background-color: $baseBlue;
+            color: $subWhite;
+          }
+        }
+      }
+      
+      .btnTab-list {
+        @include btnTab($baseBlue, $subWhite, 18px);
+      }
+    }
+// -----------------------
+// main架構
+// -----------------------
+main{
+  flex: 1;
+  padding: 20px;
+  z-index: 2;
+}
+}

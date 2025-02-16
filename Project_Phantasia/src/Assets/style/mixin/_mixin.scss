@@ -1,0 +1,186 @@
+// =============首頁(宏育)=============
+
+@mixin imgCenter() {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin hoverArea() {
+  position: absolute;
+  z-index: 1000;
+  pointer-events: auto;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0);
+}
+
+//====================================
+// ---------------
+// 背景+邊框
+// ---------------
+@mixin wrapperBgc() {
+  $bgc: rgb(249, 250, 249, 95%); //顏色
+  background-image: url("/src/Assets/img/galaxyBg.png");
+  background-size: cover;
+  background-position: center center;
+  background-color: $bgc;
+  backdrop-filter: blur(5px);
+  background-blend-mode: soft-light;
+}
+
+//--------------------------------
+//key-btn
+//--------------------------------
+
+@mixin keybtn($bgc, $borderColor: false, $boxShadow: ture) {
+  background-color: $bgc;
+  width: fit-content;
+  align-items: center;
+  padding: 5px 10px;
+  display: flex;
+  gap: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  @if $boxShadow {
+    box-shadow: 0px 0px 30px 0px rgba($bgc, 0.6);
+  }
+  @if $borderColor {
+    border: 1.5px solid $bgc;
+    background-color: $subWhite;
+    color: $bgc;
+  }
+}
+//--------------------------------
+//normal-btn
+//--------------------------------
+@mixin normalBtn($Color) {
+  color: $Color;
+  width: fit-content;
+  align-items: center;
+  display: flex;
+  gap: 10px;
+  padding: 5px;
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 1.5px;
+    width: 0;
+    background-color: $Color;
+    transition: width 0.4s ease;
+    transform-origin: left;
+  }
+  &:hover::after,
+  &.active::after {
+    width: 100%;
+  }
+  &:hover{
+    @include cols-transition();
+  }
+}
+
+//--------------------------------
+//icon
+//--------------------------------
+@mixin iconSize($size) {
+  width: $size;
+  height: $size;
+  background-size: cover;
+}
+@mixin save($color, $size) {
+  background-image: url(/src/Assets/img/icon/#{$color}-save.png);
+  @include iconSize($size);
+}
+@mixin arrow($color, $size) {
+  background-image: url(/src/Assets/img/icon/#{$color}-arrow.png);
+  @include iconSize($size);
+}
+@mixin check($color, $size) {
+  background-image: url(/src/Assets/img/icon/#{$color}-check.png);
+  @include iconSize($size);
+}
+@mixin edit($color, $size) {
+  background-image: url(/src/Assets/img/icon/#{$color}-edit.png);
+  @include iconSize($size);
+}
+@mixin upload($color, $size) {
+  background-image: url(/src/Assets/img/icon/#{$color}-upload.png);
+  @include iconSize($size);
+}
+@mixin pen($color, $size) {
+  background-image: url(/src/Assets/img/icon/#{$color}-pen.png);
+  @include iconSize($size);
+}
+@mixin view($color, $size) {
+  background-image: url(/src/Assets/img/icon/#{$color}-view.png);
+  @include iconSize($size);
+}
+@mixin plus($color, $size) {
+  background-image: url(/src/Assets/img/icon/#{$color}-plus.png);
+  @include iconSize($size);
+}
+@mixin setting($color, $size) {
+  background-image: url(/src/Assets/img/icon/#{$color}-setting.png);
+  @include iconSize($size);
+}
+@mixin search($color, $size) {
+  background-image: url(/src/Assets/img/icon/#{$color}-search.png);
+  @include iconSize($size);
+}
+// cross
+@mixin cols($line-width: 2px, $color) {
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  transform: translateX(0);
+  transition: all 0.3s ease;
+  span {
+    width: $line-width;
+    height: 80%;
+    background-color: $color;
+  }
+}
+@mixin cols-transition() {
+  .cols {
+    display: flex;
+    transform: translateX(calc(4%));
+    span:nth-child(2) {
+      display: none;
+    }
+  }
+}
+@mixin rows($line-width: 2px, $color) {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  span {
+    width: 80%;
+    height: $line-width;
+    background-color: $color;
+  }
+}
+@mixin cross($size, $color, $line-width: 2px) {
+  position: relative;
+  width: $size;
+  height: $size;
+  .cols {
+    @include cols($line-width, $color);
+  }
+  .rows {
+    @include rows($line-width, $color);
+  }
+
+  &:hover {
+    @include cols-transition();
+  }
+}
+

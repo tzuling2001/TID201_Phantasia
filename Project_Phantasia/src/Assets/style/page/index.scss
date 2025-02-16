@@ -1,0 +1,773 @@
+@use "sass:map";
+
+// mixin
+@import "../base/font";
+@import "../base/color";
+@import "../mixin/mixin";
+@import "../component/btn";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+button {
+  all: unset;
+  cursor: pointer;
+}
+
+.bgBook {
+  height: 100vh;
+
+  z-index: 1000;
+  @include imgCenter();
+  pointer-events: none;
+}
+
+.main {
+  position: absolute;
+  z-index: 1;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background-color: black;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.positionArea {
+  @include imgCenter();
+  width: calc(2545 / 1257 * 100vh); /* 根據螢幕高度調整寬度 */
+  height: 100vh; /* 高度為螢幕高度 */
+  // background-color: #e5ff00;
+  overflow: hidden;
+  z-index: 400;
+}
+
+.parallax-wrapper {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+}
+
+.main_container {
+  position: relative;
+}
+
+.main_container img {
+  @include imgCenter();
+  // transform: scale(1.07);
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.1s ease-out;
+  // pointer-events: none;
+}
+
+.main_container .img_hover {
+  opacity: 0;
+  transition: opacity 0.6s ease-out;
+}
+
+.main_container .scroll {
+  opacity: 0;
+  transition: opacity 1.2s ease-out;
+  transition-delay: 0.2s;
+  animation: bounceScroll 3s ease-in-out infinite; /* 上下浮動動畫 */
+  position: absolute;
+  z-index: 1000;
+}
+
+.about_scroll {
+  transition-delay: 0.35s !important;
+}
+
+.main_container .magic {
+  opacity: 0;
+  position: absolute;
+  z-index: 920;
+  width: 100%;
+  height: 100vh;
+  transition: opacity 0.6s ease-out;
+}
+
+.main_container .magic img {
+  position: absolute;
+  animation-fill-mode: forwards;
+}
+
+.magic .about_magic1 {
+  animation: magicCycle 9s infinite;
+}
+
+.magic .about_magic2 {
+  animation: magicCycle 9s infinite 2.2s;
+}
+
+.magic .about_magic3 {
+  animation: magicCycle 9s infinite 5.7s;
+}
+
+@keyframes magicCycle {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.parallax-wrapper .skyCity {
+  animation: bounce 4s ease-in-out infinite; /* 上下浮動動畫 */
+  position: absolute;
+  z-index: 500;
+}
+
+// .storyBooks_scroll {
+
+// }
+
+/* 上下浮動的 keyframes 動畫 */
+@keyframes bounce {
+  0% {
+    transform: translate(-50%, -50%) translateY(0) scale(0.97); /* 初始位置，保持置中 */
+  }
+  50% {
+    transform: translate(-50%, -50%) translateY(-6px) scale(0.98); /* 上移 10px */
+  }
+  100% {
+    transform: translate(-50%, -50%) translateY(0) scale(0.97); /* 返回初始位置 */
+  }
+}
+
+@keyframes bounceScroll {
+  0% {
+    transform: translate(-50%, -50%) translateY(-13px) scale(0.97); /* 初始位置，保持置中 */
+  }
+  50% {
+    transform: translate(-50%, -50%) translateY(0) scale(0.98); /* 上移 10px */
+  }
+  100% {
+    transform: translate(-50%, -50%) translateY(-13px) scale(0.97); /* 返回初始位置 */
+  }
+}
+
+.parallax-wrapper .cloud_left {
+  animation: moveCloud 4s ease-in-out infinite; /* 設定左右移動動畫 */
+}
+
+@keyframes moveCloud {
+  0% {
+    transform: translate(-50%, -50%) translate(0px, -3px); /* 開始時向左偏移 */
+  }
+  50% {
+    transform: translate(-50%, -50%) translate(6px, 1px); /* 移動到右邊 */
+  }
+  100% {
+    transform: translate(-50%, -50%) translate(0px, -3px); /* 返回到左邊 */
+  }
+}
+
+.parallax-wrapper .cloud_right {
+  animation: moveCloud2 3.7s ease-in-out infinite; /* 設定左右移動動畫 */
+}
+
+@keyframes moveCloud2 {
+  0% {
+    transform: translate(-50%, -50%) translate(-3px, 3px); /* 開始時向左偏移 */
+  }
+  50% {
+    transform: translate(-50%, -50%) translate(3px, -1px); /* 移動到右邊 */
+  }
+  100% {
+    transform: translate(-50%, -50%) translate(-3px, 3px); /* 返回到左邊 */
+  }
+}
+
+.parallax-wrapper .sky {
+  animation: bounceSky 6s ease-in-out infinite; /* 上下浮動動畫 */
+}
+
+/* 上下浮動的 keyframes 動畫 */
+@keyframes bounceSky {
+  0% {
+    transform: translate(-50%, -50%) translateY(-15px);
+  }
+  50% {
+    transform: translate(-50%, -50%) translateY(-20px);
+  }
+  100% {
+    transform: translate(-50%, -50%) translateY(-15px);
+  }
+}
+
+.parallax-wrapper .base {
+  animation: scaleBase 8s ease-in-out infinite; /* 設定放大縮小的動畫 */
+}
+
+/* 定義放大縮小的動畫 */
+@keyframes scaleBase {
+  0% {
+    transform: translate(-50%, -50%) scale(1); /* 初始狀態，原始大小 */
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.017); /* 中間狀態，放大 */
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1); /* 結束狀態，回到原始大小 */
+  }
+}
+
+.parallax-wrapper .pillar_left {
+  animation: movePillar 8s ease-in-out infinite; /* 設定左右移動動畫 */
+}
+
+@keyframes movePillar {
+  0% {
+    transform: translate(-50%, -50%) translateX(-1px) scale(1.07);
+  }
+  50% {
+    transform: translate(-50%, -50%) translateX(4px) scale(1.07);
+  }
+  100% {
+    transform: translate(-50%, -50%) translateX(-1px) scale(1.07);
+  }
+}
+
+.parallax-wrapper .pillar_right {
+  animation: movePillar2 8s ease-in-out infinite; /* 設定左右移動動畫 */
+}
+
+@keyframes movePillar2 {
+  0% {
+    transform: translate(-50%, -50%) translateX(1px) scale(1.07);
+  }
+  50% {
+    transform: translate(-50%, -50%) translateX(-4px) scale(1.07);
+  }
+  100% {
+    transform: translate(-50%, -50%) translateX(1px) scale(1.07);
+  }
+}
+
+.parallax-wrapper .book,
+.parallax-wrapper .boy,
+.parallax-wrapper .lamp,
+.parallax-wrapper .platform {
+  animation: bouncePlatform 8s ease-in-out infinite; /* 上下浮動動畫 */
+}
+
+/* 上下浮動的 keyframes 動畫 */
+@keyframes bouncePlatform {
+  0% {
+    transform: translate(-50%, -50%) translateY(0px) scale(1.07);
+  }
+  50% {
+    transform: translate(-50%, -50%) translateY(-2px) scale(1.07);
+  }
+  100% {
+    transform: translate(-50%, -50%) translateY(0px) scale(1.07);
+  }
+}
+
+/*--------- hover area  -----------*/
+
+.hoverAreaSkyCity {
+  @include hoverArea();
+  width: 16.5vw;
+  height: 40vh;
+  top: 10%;
+  left: 42%;
+  // background-color: #fff;
+}
+
+.hoverAreaSkyCity:hover + .skyCity {
+  opacity: 1;
+}
+
+.hoverAreaSkyCity:hover + .skyCity ~ .storyBooks_scroll {
+  opacity: 1;
+}
+
+.hoverAreaBoy1 {
+  @include hoverArea();
+  width: 9vw;
+  height: 40vh;
+  bottom: 5%;
+  left: 45%;
+  // background-color: #fff;
+}
+
+.hoverAreaBoy2 {
+  @include hoverArea();
+  width: 30vw;
+  height: 20vh;
+  bottom: 3%;
+  left: 30%;
+  // background-color: yellow;
+}
+
+.hoverAreaBoy:hover + .boy {
+  opacity: 1;
+}
+
+.hoverAreaBoy:hover + .boy ~ .myCabin_scroll {
+  opacity: 1;
+}
+
+.hoverAreaLamp {
+  @include hoverArea();
+  width: 9vw;
+  height: 30vh;
+  bottom: 5%;
+  left: 18.6%;
+  // background-color: #fff;
+}
+
+.hoverAreaLamp:hover + .lamp {
+  opacity: 1;
+}
+
+.hoverAreaLamp:hover + .lamp ~ .lamp_night {
+  opacity: 1;
+}
+
+.hoverAreaBook {
+  @include hoverArea();
+  width: 26vw;
+  height: 22vh;
+  bottom: 3%;
+  right: 13%;
+  // background-color: #fff;
+}
+
+.hoverAreaBook:hover + .book {
+  opacity: 1;
+}
+
+.hoverAreaBook:hover + .book ~ .about_scroll {
+  opacity: 1;
+}
+
+.hoverAreaBook:hover ~ .book ~ .magic {
+  opacity: 1;
+}
+
+/* -----------------HoverArea RWD------------------ */
+
+@media (max-width: 1200px) {
+  .hoverAreaSkyCity {
+    width: 22vw;
+    height: 40vh;
+    left: 41.5%;
+  }
+  .hoverAreaBoy1 {
+    width: 11vw;
+    left: 46%;
+  }
+  .hoverAreaBoy2 {
+    width: 38vw;
+    left: 31%;
+  }
+
+  .hoverAreaLamp {
+    width: 11vw;
+    left: 18.3%;
+  }
+  .hoverAreaBook {
+    width: 32vw;
+  }
+}
+
+/* @media (max-width: 768px) {
+    .hoverAreaSkyCity {
+      width: 25vw;
+      height: 40vh;
+    }
+  } */
+
+/* ============================夜晚=============================== */
+
+.parallax-wrapper .left_castle {
+  animation: movecastle 4s ease-in-out infinite; /* 設定左右移動動畫 */
+}
+
+@keyframes movecastle {
+  0% {
+    transform: translate(-50%, -50%) translate(2px, 5px) scale(1);
+  }
+  50% {
+    transform: translate(-50%, -50%) translate(2px, 5px) scale(1.004);
+  }
+  100% {
+    transform: translate(-50%, -50%) translate(2px, 5px) scale(1);
+  }
+}
+
+.parallax-wrapper .right_castle {
+  animation: movecastle2 4s ease-in-out infinite; /* 設定左右移動動畫 */
+}
+
+@keyframes movecastle2 {
+  0% {
+    transform: translate(-50%, -50%) translate(2px, 4px) scale(1);
+  }
+  50% {
+    transform: translate(-50%, -50%) translate(2px, 4px) scale(1.008);
+  }
+  100% {
+    transform: translate(-50%, -50%) translate(2px, 4px) scale(1);
+  }
+}
+
+.parallax-wrapper .sky_night {
+  animation: bounceSky_night 9s ease-in-out infinite;
+}
+
+@keyframes bounceSky_night {
+  0% {
+    transform: translate(-50%, -50%) translateY(5px) scale(1.025);
+  }
+  50% {
+    transform: translate(-50%, -50%) translateY(10px) scale(1.025);
+  }
+  100% {
+    transform: translate(-50%, -50%) translateY(5px) scale(1.025);
+  }
+}
+
+.parallax-wrapper .sky_night_plantent {
+  animation: bounceSky_night_plantent 4s ease-in-out infinite;
+}
+
+@keyframes bounceSky_night_plantent {
+  0% {
+    transform: translate(-50%, -50%) translateY(6px) scale(1.025);
+  }
+  50% {
+    transform: translate(-50%, -50%) translateY(13px) scale(1.025);
+  }
+  100% {
+    transform: translate(-50%, -50%) translateY(6px) scale(1.025);
+  }
+}
+
+.parallax-wrapper .sky_night_star {
+  animation: bounceSky_night_star 4.5s ease-in-out infinite;
+}
+
+@keyframes bounceSky_night_star {
+  0% {
+    transform: translate(-50%, -50%) translateY(13px) scale(1.025);
+  }
+  50% {
+    transform: translate(-50%, -50%) translateY(7px) scale(1.025);
+  }
+  100% {
+    transform: translate(-50%, -50%) translateY(13px) scale(1.025);
+  }
+}
+
+.parallax-wrapper .sky_night_moon {
+  animation: bounceSky_night_moon 7.5s ease-in-out infinite;
+}
+
+@keyframes bounceSky_night_moon {
+  0% {
+    transform: translate(-50%, -50%) translateY(3px) scale(1.015);
+  }
+  50% {
+    transform: translate(-50%, -50%) translateY(10px) scale(1.025);
+  }
+  100% {
+    transform: translate(-50%, -50%) translateY(3px) scale(1.015);
+  }
+}
+
+// ==================hoverArea======================
+
+.hoverAreaLeftCastle {
+  @include hoverArea();
+  width: 17vw;
+  height: 30vh;
+  top: 28%;
+  left: 29.5%;
+  // background-color: #fff;
+}
+
+.hoverAreaLeftCastle:hover + .left_castle {
+  opacity: 1;
+}
+
+.hoverAreaLeftCastle:hover + .left_castle ~ .creationCenter_scroll {
+  opacity: 1;
+}
+
+.hoverAreaRightCastle {
+  @include hoverArea();
+  width: 19vw;
+  height: 40vh;
+  top: 40%;
+  right: 28.5%;
+  // background-color: #fff;
+}
+
+.hoverAreaRightCastle:hover + .right_castle {
+  opacity: 1;
+}
+
+.hoverAreaRightCastle:hover + .right_castle ~ .memberCenter_scroll {
+  opacity: 1;
+}
+
+/* -----------------HoverArea RWD------------------ */
+
+@media (max-width: 1200px) {
+  .hoverAreaLeftCastle {
+    width: 21vw;
+    left: 31%;
+  }
+  .hoverAreaRightCastle {
+    width: 24vw;
+    right: 30%;
+  }
+}
+
+.dayTransferVideo,
+.nightTransferVideo {
+  @include imgCenter();
+  height: 100%;
+  z-index: 200;
+}
+
+// =======================About頁面==========================
+
+.aboutWrapper {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background-color: black;
+  z-index: 3;
+}
+
+.about {
+  max-width: 1440px;
+  width: 100%;
+  margin: auto;
+
+  // border: yellow solid 4px;
+
+  .content {
+    max-width: 1440px;
+    // max-height: 1000px;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+
+    z-index: 100;
+    // border: blue solid 4px;
+    .leftContent {
+      // border: lightgreen solid 4px;
+      padding: 30px 40px 30px 40px;
+      height: 100vh;
+      display: flex;
+
+      .contentBox {
+        width: 373px;
+        max-height: 600px;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        .slogon {
+          // border: red solid 2px;
+          color: white;
+          h1 {
+            color: #fff;
+            text-shadow: 6px 6px 15px rgba(0, 0, 0, 0.6);
+            font-family: Aleo;
+            font-size: 64px;
+            font-style: normal;
+            font-weight: 800;
+            line-height: 125%; /* 80px */
+            text-transform: uppercase;
+          }
+          h2 {
+            color: #fff;
+            text-shadow: 6px 6px 15px rgba(0, 0, 0, 0.6);
+
+            font-family: Aleo;
+            font-size: 48px;
+            font-style: normal;
+            font-weight: 800;
+            line-height: 125%;
+            text-transform: uppercase;
+          }
+          h6 {
+            color: #fff;
+            text-shadow: 6px 6px 15px rgba(0, 0, 0, 0.6);
+            font-family: Aleo;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+          }
+        }
+        .menu {
+          // border: lightgoldenrodyellow solid 2px;
+          margin-top: auto;
+
+          color: white;
+          text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.4);
+          font-family: "Fanwood Text";
+          font-size: 44px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          font-variant: small-caps;
+
+          .backToHome {
+            font-size: 26px;
+            margin-top: 5px;
+            font-style: italic;
+            &::after {
+              height: 3px;
+            }
+          }
+
+          .btnLink {
+            padding: 0;
+            opacity: 70%;
+            &:hover {
+              opacity: 100%;
+            }
+
+            &.active {
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+
+    .rightContent {
+      // border: lightgreen solid 4px;
+      height: 100vh;
+      padding: 30px;
+
+      .aboutContents {
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        // border: red solid 2px;
+
+        // display: flex;
+        // flex-direction: column; /* 垂直排列 */
+        // align-items: center; /* 使子元素在水平方向居中 */
+
+        // height: 100%; /* 確保容器佔據整個父元素高度 */
+        width: 390px;
+        height: 560px;
+
+        .aboutUsContent {
+          position: absolute;
+          // width: 370px;
+          // height: 538px;
+
+          z-index: 1;
+
+          // border: blueviolet solid 2px;
+          .box {
+            position: absolute;
+            width: 390px;
+            height: 560px;
+
+            // background-color: yellow;
+            h3 {
+              padding: 10px 0px 7px 17px;
+              color: #fff;
+              font-family: "Fanwood Text";
+              font-size: 36px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: normal;
+              font-variant: small-caps;
+            }
+
+            h4 {
+              padding: 0px 0px 5px 17px;
+              color: #fff;
+              font-family: "Fanwood Text";
+              font-size: 20px;
+              font-style: italic;
+              font-weight: 400;
+              line-height: 110%;
+            }
+
+            p,
+            li {
+              color: #fff;
+              text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6);
+              font-family: "Fanwood Text";
+              font-size: 17px;
+              font-style: italic;
+              font-weight: 400;
+              line-height: 110%; /* 17.6px */
+            }
+
+            p {
+              padding: 0 15px 15px 17px;
+            }
+
+            li {
+              padding: 3px 15px 15px 3px;
+            }
+
+            ul {
+              padding-left: 35px;
+              padding-right: 5px;
+            }
+          }
+        }
+        .bgBlack {
+          width: 390px;
+          height: 560px;
+          position: absolute;
+          border-radius: 26px;
+          // background-color: #00eaff;
+          background: rgba(0, 0, 0, 0.4);
+          filter: blur(6px);
+        }
+      }
+    }
+  }
+
+  .aboutUsImg,
+  .ourOriginImg,
+  .ourServicesImg {
+    max-width: 1440px;
+    // width: 100%;
+    // width: 100vw;
+    @include imgCenter();
+  }
+
+  .video1 {
+    max-width: 1440px;
+    z-index: 1;
+    @include imgCenter();
+  }
+}

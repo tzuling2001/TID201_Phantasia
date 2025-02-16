@@ -1,0 +1,78 @@
+.Create{
+    width: 100%;
+    position: relative;
+    // 定位
+    .CreateMenu{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        position: sticky;
+        top: 0;
+        z-index: 2;
+    }
+    .main-content{
+        width: 100%;
+        height: 80px;
+        background-color: $baseOrange;
+        position: absolute;
+        top: 0;
+        z-index: 1;
+    }
+
+}
+
+// =========================
+// CreateMenu 內部設定
+// =========================
+.CreateMenu{
+    // =========================
+    // 共用設定
+    // =========================
+    .Menu {
+        width: 250px; 
+        height: calc(100vh - 140px);
+        background-color: $subWhite;
+        transition: width 0.3s ease;
+        
+        /* Toggle */
+        .Toggle{
+            width: 25px;
+            height: 25px;
+            background-image: url("/src/Assets/img/icon/open.png");
+            background-size: cover;
+            background-position: center;
+            &.close{
+                background-image: url("/src/Assets/img/icon/close.png");
+            }
+        }
+        .MenuContent.close{
+            display: none;
+        }
+    }
+    .Function{
+        border-right: solid $baseBlue;
+        &.close {
+            transform: translateX(-200px);
+        }
+        .FunctionBar{
+            width: 100%;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+    .PageView{
+        border-left: solid $baseBlue;
+        &.close {
+            transform: translateX(200px);
+        }
+        .topBar{
+            width: 100%;
+            padding: 10px;
+            display: flex;
+            justify-content: start;
+            align-items: center;
+        }
+    }
+}

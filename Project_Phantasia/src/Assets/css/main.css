@@ -1227,6 +1227,111 @@ input[date], select {
   display: none;
 }
 
+.file-item {
+  padding: 5px;
+  margin: 5px;
+}
+
+.grid-view {
+  display: flex;
+  flex-direction: column;
+  max-width: 200px;
+  width: 100%;
+  border-radius: 5%;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  overflow: hidden;
+}
+.grid-view .file-img {
+  width: 200px;
+  height: 150px;
+  background-color: #dee2e6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.grid-view img {
+  width: 200px;
+  height: auto;
+  object-fit: cover;
+}
+.grid-view .file-info {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 10px;
+  gap: 5px;
+  background-color: #f9faf9;
+}
+.grid-view .file-info .file-time {
+  font-size: 12px;
+}
+
+.list-view {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: #999999 solid 1px;
+}
+.list-view .file-img {
+  width: 50px;
+  height: 50px;
+  background-color: #dee2e6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.list-view .file-name {
+  flex: 1;
+  text-align: start;
+  padding-left: 10px;
+}
+.list-view .file-time {
+  width: 200px;
+  text-align: right;
+  padding-right: 10px;
+}
+
+.draft-view {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: #999999 solid 1px;
+}
+.draft-view .file-img {
+  width: 50px;
+  height: 50px;
+  background-color: #dee2e6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.draft-view .file-name {
+  flex: 1;
+  text-align: start;
+  padding-left: 10px;
+}
+.draft-view .file-time {
+  width: 200px;
+  display: flex;
+  justify-content: end;
+}
+.draft-view .more-button {
+  width: 150px;
+  display: flex;
+  justify-content: end;
+}
+.draft-view .more-button .viewIcon {
+  background-image: url(/src/Assets/img/icon/dark-view.png);
+  width: 16px;
+  height: 16px;
+  background-size: cover;
+}
+.draft-view .more-button p {
+  font-size: 16px;
+}
+
 .ProjectMenu {
   width: 100%;
   display: flex;
@@ -1530,138 +1635,19 @@ input[date], select {
   z-index: 2;
 }
 
-.Create {
-  display: grid;
-  grid-template-columns: auto 1fr auto; /* 左側邊欄 | 主要內容 | 右側邊欄 */
-  height: 100vh;
-}
-.Create .sidebar {
-  width: 250px; /* 側邊欄寬度 */
-  background-color: #f4f4f4;
-  border-right: 1px solid #ccc;
-  transition: width 0.3s ease;
-}
-.Create .sidebar.collapsed {
-  width: 50px; /* 收縮後的寬度 */
-}
-.Create .sidebar-content {
-  padding: 10px;
-}
-.Create .main-content {
-  background-color: #fff;
-  padding: 20px;
-}
-.Create button {
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 10px;
-  font-size: 14px;
-}
-
-.file-item {
-  padding: 5px;
-  margin: 5px;
-}
-
-.grid-view {
-  display: flex;
-  flex-direction: column;
-  max-width: 200px;
-  width: 100%;
-  border-radius: 5%;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-  overflow: hidden;
-}
-.grid-view .file-img {
-  width: 200px;
-  height: 150px;
-  background-color: #dee2e6;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.grid-view img {
-  width: 200px;
-  height: auto;
-  object-fit: cover;
-}
-.grid-view .file-info {
-  display: flex;
-  flex-direction: column;
+.CreateMenuContent {
   width: 100%;
   padding: 10px;
-  gap: 5px;
-  background-color: #f9faf9;
 }
-.grid-view .file-info .file-time {
-  font-size: 12px;
+.CreateMenuContent .bookInfoBox {
+  margin-bottom: 30px;
 }
-
-.list-view {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-  border-bottom: #999999 solid 1px;
+.CreateMenuContent .bookInfoBox .title {
+  color: #eead50;
 }
-.list-view .file-img {
-  width: 50px;
-  height: 50px;
-  background-color: #dee2e6;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.list-view .file-name {
-  flex: 1;
-  text-align: start;
-  padding-left: 10px;
-}
-.list-view .file-time {
-  width: 200px;
-  text-align: right;
-  padding-right: 10px;
-}
-
-.draft-view {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-  border-bottom: #999999 solid 1px;
-}
-.draft-view .file-img {
-  width: 50px;
-  height: 50px;
-  background-color: #dee2e6;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.draft-view .file-name {
-  flex: 1;
-  text-align: start;
-  padding-left: 10px;
-}
-.draft-view .file-time {
-  width: 200px;
-  display: flex;
-  justify-content: end;
-}
-.draft-view .more-button {
-  width: 150px;
-  display: flex;
-  justify-content: end;
-}
-.draft-view .more-button .viewIcon {
-  background-image: url(/src/Assets/img/icon/dark-view.png);
-  width: 16px;
-  height: 16px;
-  background-size: cover;
-}
-.draft-view .more-button p {
-  font-size: 16px;
+.CreateMenuContent .bookInfoBox .subTitle {
+  margin-top: 20px;
+  color: #999999;
 }
 
 header {
@@ -2438,6 +2424,74 @@ header {
   opacity: 50%;
   height: 500px;
   overflow: hidden;
+}
+
+.Create {
+  width: 100%;
+  position: relative;
+}
+.Create .CreateMenu {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+.Create .main-content {
+  width: 100%;
+  height: 80px;
+  background-color: #eead50;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+}
+
+.CreateMenu .Menu {
+  width: 250px;
+  height: calc(100vh - 140px);
+  background-color: #f9faf9;
+  transition: width 0.3s ease;
+  /* Toggle */
+}
+.CreateMenu .Menu .Toggle {
+  width: 25px;
+  height: 25px;
+  background-image: url("/src/Assets/img/icon/open.png");
+  background-size: cover;
+  background-position: center;
+}
+.CreateMenu .Menu .Toggle.close {
+  background-image: url("/src/Assets/img/icon/close.png");
+}
+.CreateMenu .Menu .MenuContent.close {
+  display: none;
+}
+.CreateMenu .Function {
+  border-right: solid #153243;
+}
+.CreateMenu .Function.close {
+  transform: translateX(-200px);
+}
+.CreateMenu .Function .FunctionBar {
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.CreateMenu .PageView {
+  border-left: solid #153243;
+}
+.CreateMenu .PageView.close {
+  transform: translateX(200px);
+}
+.CreateMenu .PageView .topBar {
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
 }
 
 .CreateNewProject {

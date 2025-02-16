@@ -1,34 +1,15 @@
-.Create {
-    display: grid;
-    grid-template-columns: auto 1fr auto; /* 左側邊欄 | 主要內容 | 右側邊欄 */
-    height: 100vh;
-  
-  .sidebar {
-    width: 250px; /* 側邊欄寬度 */
-    background-color: #f4f4f4;
-    border-right: 1px solid #ccc;
-    transition: width 0.3s ease;
-  }
-  
-  .sidebar.collapsed {
-    width: 50px; /* 收縮後的寬度 */
-  }
-  
-  .sidebar-content {
+.CreateMenuContent{
+    width: 100%;
     padding: 10px;
-  }
-  
-  .main-content {
-    background-color: #fff;
-    padding: 20px;
-  }
-  
-  button {
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 10px;
-    font-size: 14px;
-  }
-
+    .bookInfoBox{
+        margin-bottom: 30px;
+        .title{
+            color: $baseOrange;
+        }
+        .subTitle{
+            margin-top: 20px;
+            color: $subDark-gray;
+        }
+    }
+    
 }

@@ -13,10 +13,10 @@
 @import "./component/btn";
 @import "./component/form";
 @import "./component/icon";
-@import "./component/MenuSidebar";
-@import "./component/CreateMenu";
 @import "./component/table";
 @import "./component/FileItem";
+@import "./component/ProjectMenu";
+@import "./component/CreateMenu";
 
 // layout  (因為已經拉出成共用組件component，所以這邊好像不需要)
 @import "./layout/header";
@@ -34,6 +34,7 @@
 // CreateProject (Project+Draft)
 @import "./page/CreateProject";
 @import "./page/CreateInfo";
+@import "./page/Create";
 //= Props
     @import "./page/CreateNewProject";
     @import "./page/AddCover";

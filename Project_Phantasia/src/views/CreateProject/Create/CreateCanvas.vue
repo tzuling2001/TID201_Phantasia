@@ -23,22 +23,24 @@
       <div class="canvas"></div>
     </div>
     <!-- BTN - addCanvas -->
-    <div class="addCanvas">
-      <div class="btnKey-M dark-border">
-        <p>Add new page</p>
-        <!-- cross (icon) :內層 class 同上(內部還有其他元素不要掉了)-->
-        <div class="icon-M">
-          <div class="dark-cross">
-            <div class="cols">
-              <span></span>
-              <span></span>
-            </div>
-            <div class="rows">
-              <span></span>
+    <router-link to="./Create/CreateInfo">
+      <div class="addCanvas">
+        <div class="btnKey-M dark-border">
+          <p>Add new page (先連到下一頁)</p>
+          <!-- cross (icon) :內層 class 同上(內部還有其他元素不要掉了)-->
+          <div class="icon-M">
+            <div class="dark-cross">
+              <div class="cols">
+                <span></span>
+                <span></span>
+              </div>
+              <div class="rows">
+                <span></span>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </router-link>
   </div>
 </template>

@@ -325,6 +325,261 @@
   display: none;
 }
 
+/* ----- tab Btn ---- */
+.btnTab {
+  display: flex;
+  width: 100%;
+  border-bottom: #153243 solid;
+  /* hover */
+}
+.btnTab .text {
+  padding: 5px 10px;
+  color: #153243;
+  width: 100%;
+  font-size: 20px;
+}
+.btnTab .tab-cross {
+  position: relative;
+  width: 40px;
+  border-left: #153243 solid;
+}
+.btnTab .tab-cross .cols {
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  transform: translateX(0);
+  transition: all 0.3s ease;
+}
+.btnTab .tab-cross .cols span {
+  width: 2px;
+  height: 80%;
+  background-color: #153243;
+}
+.btnTab .tab-cross .rows {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+}
+.btnTab .tab-cross .rows span {
+  width: 80%;
+  height: 2px;
+  background-color: #153243;
+}
+.btnTab:hover .tab-cross {
+  position: relative;
+  height: auto;
+  width: 40px;
+  background-color: #153243;
+}
+.btnTab:hover .tab-cross .cols {
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  transform: translateX(0);
+  transition: all 0.3s ease;
+  transform: translateX(4%);
+}
+.btnTab:hover .tab-cross .cols span {
+  width: 2px;
+  height: 80%;
+  background-color: #f9faf9;
+}
+.btnTab:hover .tab-cross .cols span:nth-child(2) {
+  display: none;
+}
+.btnTab:hover .tab-cross .rows {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+}
+.btnTab:hover .tab-cross .rows span {
+  width: 80%;
+  height: 2px;
+  background-color: #f9faf9;
+}
+.btnTab.active {
+  display: flex;
+  width: 100%;
+  border-bottom: #153243 solid;
+  /* hover */
+}
+.btnTab.active .text {
+  padding: 5px 10px;
+  color: #153243;
+  width: 100%;
+  font-size: 18px;
+}
+.btnTab.active .tab-cross {
+  position: relative;
+  width: 40px;
+  border-left: #153243 solid;
+}
+.btnTab.active .tab-cross .cols {
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  transform: translateX(0);
+  transition: all 0.3s ease;
+}
+.btnTab.active .tab-cross .cols span {
+  width: 2px;
+  height: 80%;
+  background-color: #153243;
+}
+.btnTab.active .tab-cross .rows {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+}
+.btnTab.active .tab-cross .rows span {
+  width: 80%;
+  height: 2px;
+  background-color: #153243;
+}
+.btnTab.active:hover .tab-cross {
+  position: relative;
+  height: auto;
+  width: 40px;
+  background-color: #153243;
+}
+.btnTab.active:hover .tab-cross .cols {
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  transform: translateX(0);
+  transition: all 0.3s ease;
+  transform: translateX(4%);
+}
+.btnTab.active:hover .tab-cross .cols span {
+  width: 2px;
+  height: 80%;
+  background-color: #f9faf9;
+}
+.btnTab.active:hover .tab-cross .cols span:nth-child(2) {
+  display: none;
+}
+.btnTab.active:hover .tab-cross .rows {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+}
+.btnTab.active:hover .tab-cross .rows span {
+  width: 80%;
+  height: 2px;
+  background-color: #f9faf9;
+}
+.btnTab.active .text {
+  background-color: #153243;
+  color: #f9faf9;
+}
+
+.btnTab-list {
+  display: flex;
+  width: 100%;
+  border-bottom: #153243 solid;
+  /* hover */
+}
+.btnTab-list .text {
+  padding: 5px 10px;
+  color: #153243;
+  width: 100%;
+  font-size: 18px;
+}
+.btnTab-list .tab-cross {
+  position: relative;
+  width: 40px;
+  border-left: #153243 solid;
+}
+.btnTab-list .tab-cross .cols {
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  transform: translateX(0);
+  transition: all 0.3s ease;
+}
+.btnTab-list .tab-cross .cols span {
+  width: 2px;
+  height: 80%;
+  background-color: #153243;
+}
+.btnTab-list .tab-cross .rows {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+}
+.btnTab-list .tab-cross .rows span {
+  width: 80%;
+  height: 2px;
+  background-color: #153243;
+}
+.btnTab-list:hover .tab-cross {
+  position: relative;
+  height: auto;
+  width: 40px;
+  background-color: #153243;
+}
+.btnTab-list:hover .tab-cross .cols {
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  transform: translateX(0);
+  transition: all 0.3s ease;
+  transform: translateX(4%);
+}
+.btnTab-list:hover .tab-cross .cols span {
+  width: 2px;
+  height: 80%;
+  background-color: #f9faf9;
+}
+.btnTab-list:hover .tab-cross .cols span:nth-child(2) {
+  display: none;
+}
+.btnTab-list:hover .tab-cross .rows {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+}
+.btnTab-list:hover .tab-cross .rows span {
+  width: 80%;
+  height: 2px;
+  background-color: #f9faf9;
+}
+
+.accordionContent {
+  border-bottom: #153243 solid;
+  padding: 10px;
+}
+
 .inputBox {
   position: relative;
 }
@@ -1346,7 +1601,6 @@ input[date], select {
   height: 50vh;
   display: flex;
   flex-direction: column;
-  gap: 50px;
   border-left: #153243 solid;
   border-right: #153243 solid;
   border-bottom: #153243 solid;
@@ -1360,6 +1614,7 @@ input[date], select {
   display: flex;
   justify-content: center;
   align-items: center;
+  border-bottom: #153243 solid;
 }
 .ProjectMenu .user .useImg {
   width: 180px;
@@ -1376,258 +1631,11 @@ input[date], select {
   border-radius: 80%;
   background-color: #dee2e6;
 }
-.ProjectMenu .tab-group {
+.ProjectMenu .user .useImg .tab-group {
   width: 100%;
   display: flex;
   flex-direction: column;
   border-top: #153243 solid;
-}
-.ProjectMenu .tab-group .btnTab {
-  display: flex;
-  width: 100%;
-  border-bottom: #153243 solid;
-  /* hover */
-}
-.ProjectMenu .tab-group .btnTab .text {
-  padding: 5px 10px;
-  color: #153243;
-  width: 100%;
-  font-size: 20px;
-}
-.ProjectMenu .tab-group .btnTab .tab-cross {
-  position: relative;
-  width: 40px;
-  border-left: #153243 solid;
-}
-.ProjectMenu .tab-group .btnTab .tab-cross .cols {
-  height: 100%;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  transform: translateX(0);
-  transition: all 0.3s ease;
-}
-.ProjectMenu .tab-group .btnTab .tab-cross .cols span {
-  width: 2px;
-  height: 80%;
-  background-color: #153243;
-}
-.ProjectMenu .tab-group .btnTab .tab-cross .rows {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  bottom: 0;
-}
-.ProjectMenu .tab-group .btnTab .tab-cross .rows span {
-  width: 80%;
-  height: 2px;
-  background-color: #153243;
-}
-.ProjectMenu .tab-group .btnTab:hover .tab-cross {
-  position: relative;
-  height: auto;
-  width: 40px;
-  background-color: #153243;
-}
-.ProjectMenu .tab-group .btnTab:hover .tab-cross .cols {
-  height: 100%;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  transform: translateX(0);
-  transition: all 0.3s ease;
-  transform: translateX(4%);
-}
-.ProjectMenu .tab-group .btnTab:hover .tab-cross .cols span {
-  width: 2px;
-  height: 80%;
-  background-color: #f9faf9;
-}
-.ProjectMenu .tab-group .btnTab:hover .tab-cross .cols span:nth-child(2) {
-  display: none;
-}
-.ProjectMenu .tab-group .btnTab:hover .tab-cross .rows {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  bottom: 0;
-}
-.ProjectMenu .tab-group .btnTab:hover .tab-cross .rows span {
-  width: 80%;
-  height: 2px;
-  background-color: #f9faf9;
-}
-.ProjectMenu .tab-group .btnTab.active {
-  display: flex;
-  width: 100%;
-  border-bottom: #153243 solid;
-  /* hover */
-}
-.ProjectMenu .tab-group .btnTab.active .text {
-  padding: 5px 10px;
-  color: #153243;
-  width: 100%;
-  font-size: 18px;
-}
-.ProjectMenu .tab-group .btnTab.active .tab-cross {
-  position: relative;
-  width: 40px;
-  border-left: #153243 solid;
-}
-.ProjectMenu .tab-group .btnTab.active .tab-cross .cols {
-  height: 100%;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  transform: translateX(0);
-  transition: all 0.3s ease;
-}
-.ProjectMenu .tab-group .btnTab.active .tab-cross .cols span {
-  width: 2px;
-  height: 80%;
-  background-color: #153243;
-}
-.ProjectMenu .tab-group .btnTab.active .tab-cross .rows {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  bottom: 0;
-}
-.ProjectMenu .tab-group .btnTab.active .tab-cross .rows span {
-  width: 80%;
-  height: 2px;
-  background-color: #153243;
-}
-.ProjectMenu .tab-group .btnTab.active:hover .tab-cross {
-  position: relative;
-  height: auto;
-  width: 40px;
-  background-color: #153243;
-}
-.ProjectMenu .tab-group .btnTab.active:hover .tab-cross .cols {
-  height: 100%;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  transform: translateX(0);
-  transition: all 0.3s ease;
-  transform: translateX(4%);
-}
-.ProjectMenu .tab-group .btnTab.active:hover .tab-cross .cols span {
-  width: 2px;
-  height: 80%;
-  background-color: #f9faf9;
-}
-.ProjectMenu .tab-group .btnTab.active:hover .tab-cross .cols span:nth-child(2) {
-  display: none;
-}
-.ProjectMenu .tab-group .btnTab.active:hover .tab-cross .rows {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  bottom: 0;
-}
-.ProjectMenu .tab-group .btnTab.active:hover .tab-cross .rows span {
-  width: 80%;
-  height: 2px;
-  background-color: #f9faf9;
-}
-.ProjectMenu .tab-group .btnTab.active .text {
-  background-color: #153243;
-  color: #f9faf9;
-}
-.ProjectMenu .tab-group .btnTab-list {
-  display: flex;
-  width: 100%;
-  border-bottom: #153243 solid;
-  /* hover */
-}
-.ProjectMenu .tab-group .btnTab-list .text {
-  padding: 5px 10px;
-  color: #153243;
-  width: 100%;
-  font-size: 18px;
-}
-.ProjectMenu .tab-group .btnTab-list .tab-cross {
-  position: relative;
-  width: 40px;
-  border-left: #153243 solid;
-}
-.ProjectMenu .tab-group .btnTab-list .tab-cross .cols {
-  height: 100%;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  transform: translateX(0);
-  transition: all 0.3s ease;
-}
-.ProjectMenu .tab-group .btnTab-list .tab-cross .cols span {
-  width: 2px;
-  height: 80%;
-  background-color: #153243;
-}
-.ProjectMenu .tab-group .btnTab-list .tab-cross .rows {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  bottom: 0;
-}
-.ProjectMenu .tab-group .btnTab-list .tab-cross .rows span {
-  width: 80%;
-  height: 2px;
-  background-color: #153243;
-}
-.ProjectMenu .tab-group .btnTab-list:hover .tab-cross {
-  position: relative;
-  height: auto;
-  width: 40px;
-  background-color: #153243;
-}
-.ProjectMenu .tab-group .btnTab-list:hover .tab-cross .cols {
-  height: 100%;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  transform: translateX(0);
-  transition: all 0.3s ease;
-  transform: translateX(4%);
-}
-.ProjectMenu .tab-group .btnTab-list:hover .tab-cross .cols span {
-  width: 2px;
-  height: 80%;
-  background-color: #f9faf9;
-}
-.ProjectMenu .tab-group .btnTab-list:hover .tab-cross .cols span:nth-child(2) {
-  display: none;
-}
-.ProjectMenu .tab-group .btnTab-list:hover .tab-cross .rows {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  bottom: 0;
-}
-.ProjectMenu .tab-group .btnTab-list:hover .tab-cross .rows span {
-  width: 80%;
-  height: 2px;
-  background-color: #f9faf9;
 }
 .ProjectMenu main {
   flex: 1;
@@ -1637,17 +1645,87 @@ input[date], select {
 
 .CreateMenuContent {
   width: 100%;
-  padding: 10px;
+  position: relative;
 }
-.CreateMenuContent .bookInfoBox {
-  margin-bottom: 30px;
+.CreateMenuContent .tabGroup {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
-.CreateMenuContent .bookInfoBox .title {
-  color: #eead50;
+
+.ContentBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
 }
-.CreateMenuContent .bookInfoBox .subTitle {
-  margin-top: 20px;
-  color: #999999;
+
+.ModelBox {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.model {
+  width: 100px;
+  height: 60px;
+  border-radius: 10px;
+  background-color: #dee2e6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.model img {
+  width: 20px;
+  height: auto;
+}
+
+.A .model {
+  background-color: #999999;
+}
+
+.ContentBox.Model button {
+  all: unset;
+}
+.ContentBox.Model .addAll .btnKey-M {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+}
+
+.AccordionText .TextStyle {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.AccordionText .secondRow {
+  display: flex;
+  gap: 10px;
+}
+.AccordionText .secondRow .fontSize {
+  width: 80px;
+}
+.AccordionText .secondRow .fontWidth {
+  flex: 1;
+}
+.AccordionText .thirdRow {
+  display: flex;
+  justify-content: space-between;
+}
+.AccordionText .thirdRow .format {
+  width: 25px;
+  height: 25px;
+  border: #dee2e6 solid 1px;
+  border-radius: 5px;
+}
+.AccordionText .thirdRow .format img {
+  width: 100%;
+  height: auto;
+  opacity: 50%;
 }
 
 header {
@@ -1775,7 +1853,6 @@ header {
   width: 100%;
   overflow: auto;
   scrollbar-width: none;
-  padding: 0 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -2422,7 +2499,7 @@ header {
 }
 .createInfo .inputGroups.none {
   opacity: 50%;
-  height: 500px;
+  height: 400px;
   overflow: hidden;
 }
 
@@ -2430,74 +2507,188 @@ header {
   width: 100%;
   position: relative;
 }
-.Create .CreateMenu {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  position: sticky;
-  top: 0;
+.Create .Function {
+  position: fixed;
+  top: 120px;
+  left: 20px;
+  z-index: 3;
+}
+.Create .PageView {
+  position: fixed;
+  top: 120px;
+  right: 20px;
   z-index: 2;
 }
 .Create .main-content {
   width: 100%;
-  height: 80px;
-  background-color: #eead50;
-  position: absolute;
-  top: 0;
   z-index: 1;
 }
-
-.CreateMenu .Menu {
+.Create .CreateCanvas {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.Create .CreateCanvas .FunctionBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  width: 30%;
+  background-color: #153243;
+  border-radius: 100px;
+  margin-top: 30px;
+}
+.Create .CreateCanvas .FunctionBar .Zoom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+  color: #f9faf9;
+}
+.Create .CreateCanvas .FunctionBar .stepGroup {
+  width: 60px;
+  display: flex;
+  justify-content: space-between;
+}
+.Create .CreateCanvas .FunctionBar .stepGroup .step {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f9faf9;
+  border-radius: 20px;
+}
+.Create .CreateCanvas .FunctionBar .stepGroup .next {
+  width: 25px;
+  height: 25px;
+  background-image: url(/src/Assets/img/icon/nextStep.png);
+  background-size: cover;
+  background-position: center center;
+}
+.Create .CreateCanvas .FunctionBar .stepGroup .last {
+  width: 25px;
+  height: 25px;
+  background-image: url(/src/Assets/img/icon/lastStep.png);
+  background-size: cover;
+  background-position: center center;
+}
+.Create .CreateCanvas .canvasGroup {
+  margin-top: 30px;
+}
+.Create .CreateCanvas .canvas {
+  width: 680px;
+  height: 380px;
+  background-color: #f9faf9;
+  border: #dee2e6 solid 1px;
+}
+.Create .CreateCanvas .addCanvas {
+  margin-top: 10px;
+  margin-bottom: 50px;
+}
+.Create .CreateMenu {
+  display: flex;
+  flex-direction: column;
   width: 250px;
   height: calc(100vh - 140px);
   background-color: #f9faf9;
   transition: width 0.3s ease;
-  /* Toggle */
+  overflow: auto;
+  scrollbar-width: none;
 }
-.CreateMenu .Menu .Toggle {
+.Create .CreateMenu .Toggle {
   width: 25px;
   height: 25px;
   background-image: url("/src/Assets/img/icon/open.png");
   background-size: cover;
   background-position: center;
 }
-.CreateMenu .Menu .Toggle.close {
-  background-image: url("/src/Assets/img/icon/close.png");
-}
-.CreateMenu .Menu .MenuContent.close {
-  display: none;
-}
-.CreateMenu .Function {
+.Create .Function {
   border-right: solid #153243;
 }
-.CreateMenu .Function.close {
-  transform: translateX(-200px);
+.Create .Function .stickyBar {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  background-color: #f9faf9;
+  border-bottom: #153243 solid;
+  z-index: 2;
 }
-.CreateMenu .Function .FunctionBar {
+.Create .Function .FunctionBar {
   width: 100%;
   padding: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.CreateMenu .PageView {
+.Create .Function .bookInfoBox {
+  padding: 10px;
+  margin-bottom: 30px;
+}
+.Create .Function .bookInfoBox .title {
+  color: #eead50;
+}
+.Create .Function .bookInfoBox .subTitle {
+  margin-top: 20px;
+  color: #999999;
+}
+.Create .PageView {
   border-left: solid #153243;
 }
-.CreateMenu .PageView.close {
-  transform: translateX(200px);
-}
-.CreateMenu .PageView .topBar {
+.Create .PageView .topBar {
   width: 100%;
+  position: sticky;
+  top: 0;
   padding: 10px;
   display: flex;
   justify-content: start;
   align-items: center;
 }
+.Create .PageView .MenuContent {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 10px;
+  gap: 10px;
+}
+.Create .PageView .modelView {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.Create .PageView .modelView .modelContent {
+  width: 160px;
+  height: 100px;
+  border: #dee2e6 solid;
+  background-color: #f9faf9;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+.Create .Function.close, .Create .PageView.close {
+  width: 50px;
+}
+.Create .Function.close .Toggle, .Create .PageView.close .Toggle {
+  background-image: url("/src/Assets/img/icon/close.png");
+}
+.Create .Function.close .CheckBox, .Create .PageView.close .CheckBox {
+  display: none;
+}
+.Create .Function.close .bookInfoBox, .Create .PageView.close .bookInfoBox {
+  display: none;
+}
+.Create .Function.close .MenuContent, .Create .PageView.close .MenuContent {
+  display: none;
+}
 
 .CreateNewProject {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 20px;
 }
 .CreateNewProject .project {
   margin-top: 20px;
@@ -2519,6 +2710,12 @@ header {
   font-size: 20px;
 }
 
+.AddCover {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
 .AddCover .coverView {
   width: 100%;
   display: flex;
@@ -2554,8 +2751,7 @@ header {
   gap: 30px;
 }
 .AddCover .inputFileGroup {
-  max-width: 720px;
-  width: 100%;
+  width: 85%;
   height: 360px;
   padding: 30px;
   display: flex;

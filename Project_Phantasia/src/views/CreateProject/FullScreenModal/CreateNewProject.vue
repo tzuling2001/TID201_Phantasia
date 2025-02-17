@@ -7,7 +7,7 @@
       <div class="mainContent CreateNewProject">
         <div class="project"></div>
         <input type="text" placeholder="Enter project name" />
-        <a href="../Create/Create.vue">
+        <router-link to="/Create">
           <div class="btnKey-M dark">
             <p>CREATE</p>
             <div class="icon-L">
@@ -22,13 +22,15 @@
               </div>
             </div>
           </div>
-        </a>
+        </router-link>
       </div>
     </div>
   </div>
 </template>
 
 <script setup>
+import router from "../../../router";
+
 // 定義 props
 const props = defineProps({
   isVisible: {

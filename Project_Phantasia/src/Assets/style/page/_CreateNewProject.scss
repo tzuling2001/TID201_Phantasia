@@ -1,7 +1,9 @@
 .CreateNewProject{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 20px;
     .project{
         margin-top: 20px;
         width: calc(100%/2);

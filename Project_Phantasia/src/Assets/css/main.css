@@ -2801,19 +2801,18 @@ header {
   align-items: center;
 }
 .PublishSuccess .titleGroup p .large {
-  font-size: 10vw;
+  font-size: 14vh;
 }
 .PublishSuccess .titleGroup p .middle {
-  font-size: 8vw;
+  font-size: 10vh;
 }
 .PublishSuccess .titleGroup p .little {
-  font-size: 6vw;
+  font-size: 8vh;
 }
 .PublishSuccess .titleGroup .top {
   transform: translateY(4vh);
 }
 .PublishSuccess .titleGroup .mid .line {
-  margin: 5px;
   width: 10vw;
   height: 0.5vh;
   background-color: #153243;

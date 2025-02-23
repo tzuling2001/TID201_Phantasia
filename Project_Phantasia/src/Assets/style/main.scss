@@ -7,72 +7,36 @@
 @import "./base/others";
 
 // mixin
-@import "./mixin/mixin";
+@import "./mixin/mixin";                  //更新
 
 // component
-@import "./component/btn";
-@import "./component/form";
-@import "./component/icon";
+@import "./component/btn";                //更新
+@import "./component/form";               //更新
+@import "./component/icon";               //更新
 @import "./component/table";
-@import "./component/FileItem";
-@import "./component/ProjectMenu";
-@import "./component/CreateMenuContent";
+@import "./component/FileItem";           //更新
+@import "./component/ProjectMenu";        //更新
+@import "./component/CreateMenuContent";  //更新
 
 // layout  (因為已經拉出成共用組件component，所以這邊好像不需要)
-@import "./layout/header";
-@import "./layout/footer";
-@import "./layout/content";
-@import "./layout/Day";
-@import "./layout/FullScreenModal";
+@import "./layout/header";           //更新
+@import "./layout/footer"; 
+@import "./layout/content"; 
+@import "./layout/Day";              //更新
+@import "./layout/FullScreenModal";  //更新
 
 // -----------------------------
 // page
 // -----------------------------
 @import "./page/btnFamily";
-@import "./page/IconGroup";
+@import "./page/IconGroup";          //改掉原本的名字
 
 // CreateProject (Project+Draft)
-@import "./page/CreateProject";
-@import "./page/CreateInfo";
-@import "./page/Create";
+@import "./page/CreateProject";      //更新
+@import "./page/CreateInfo";         //更新
+@import "./page/Create";             //更新
 //= Props
-    @import "./page/CreateNewProject";
-    @import "./page/AddCover";
-    @import "./page/PublishSuccess";
+    @import "./page/CreateNewProject"; //更新
+    @import "./page/AddCover";         //更新
+    @import "./page/PublishSuccess";   //更新
 
-
-
-
-// 一定要照順序小到大，有權重問題
-
-// .bgd-wrapper {
-//   width: 100%;
-//   height: 100vh;
-//   @include wrapperBgc();
-//   position: relative;
-//   &::before,
-//   &::after {
-//     content: '';
-//     position: absolute;
-//     top: 0;
-//     left: 0;
-//     right: 0;
-//     bottom: 0;
-//     border: solid transparent;
-//   }
-//   &::before {
-//     border-width: 10px; /* 外框寬度 */
-//     border-color: $baseBlue; /* 外框顏色 */
-//     z-index: 1;
-//   }
-  
-//   &::after {
-//     border-width: 5px; /* 內框寬度 */
-//     border-color: $baseBlue; /* 內框顏色 */
-//     top: 15px; /* 外框寬度 + padding */
-//     left: 15px; /* 外框寬度 + padding */
-//     right: 15px; /* 外框寬度 + padding */
-//     bottom: 15px; /* 外框寬度 + padding */
-//     z-index: 2;
-//   }
-// }

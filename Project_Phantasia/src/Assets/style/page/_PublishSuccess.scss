@@ -13,13 +13,13 @@
             display: flex;
             align-items: center;
             .large{
-                font-size: 10vw;
+                font-size: 14vh;
             }
             .middle{
-                font-size: 8vw;
+                font-size: 10vh;
             }
             .little{
-                font-size: 6vw;
+                font-size: 8vh;
             }
 
         }
@@ -29,7 +29,7 @@
         }
         .mid{
             .line{
-                margin: 5px;
+                // margin: 5px;
                 width: 10vw;
                 height: 0.5vh;
                 background-color: $baseBlue;
